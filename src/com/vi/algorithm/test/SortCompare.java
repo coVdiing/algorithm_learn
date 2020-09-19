@@ -1,17 +1,21 @@
 package com.vi.algorithm.test;
 
 import com.vi.algorithm.sort.Insertion;
+import com.vi.algorithm.sort.Merge;
 import com.vi.algorithm.sort.Shell;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 //比较插入排序和希尔排序的速度
 public class SortCompare {
     public static void main(String[] args) throws IOException {
         Integer[] data = getArrayFromFile();
 //        testInsertion(data);    //插入排序用时:37024毫秒
-        testShell(data);    //希尔排序用时:41毫秒
+//        testShell(data);    //希尔排序用时:41毫秒
+        testMerge(data);    //希尔排序用时:153毫秒
+
     }
 
     //从测试数据中读取数据转换成数组
@@ -37,6 +41,13 @@ public class SortCompare {
     public static void testShell(Integer[] arr) {
         Long start = System.currentTimeMillis();
         Shell.sort(arr);
+        Long end = System.currentTimeMillis();
+        System.out.println("希尔排序用时:" + (end - start) + "毫秒");
+    }
+
+    public static void testMerge(Integer[] arr) {
+        Long start = System.currentTimeMillis();
+        Merge.sort(arr);
         Long end = System.currentTimeMillis();
         System.out.println("希尔排序用时:" + (end - start) + "毫秒");
     }
