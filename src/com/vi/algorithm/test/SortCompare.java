@@ -1,8 +1,6 @@
 package com.vi.algorithm.test;
 
-import com.vi.algorithm.sort.Insertion;
-import com.vi.algorithm.sort.Merge;
-import com.vi.algorithm.sort.Shell;
+import com.vi.algorithm.sort.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -12,10 +10,11 @@ import java.util.Arrays;
 public class SortCompare {
     public static void main(String[] args) throws IOException {
         Integer[] data = getArrayFromFile();
+//        testBubble(data);
 //        testInsertion(data);    //插入排序用时:37024毫秒
 //        testShell(data);    //希尔排序用时:41毫秒
-        testMerge(data);    //希尔排序用时:153毫秒
-
+//        testMerge(data);    //希尔排序用时:153毫秒
+        testQuick(data);    //快速排序用时:67毫秒
     }
 
     //从测试数据中读取数据转换成数组
@@ -29,6 +28,13 @@ public class SortCompare {
         Integer[] result = new Integer[data.size()];
         data.toArray(result);
         return result;
+    }
+
+    public static void testBubble(Integer[] arr) {
+        Long start = System.currentTimeMillis();
+        Bubble.sort(arr);
+        Long end = System.currentTimeMillis();
+        System.out.println("冒泡排序用时:" + (end - start) + "毫秒");
     }
 
     public static void testInsertion(Integer[] arr) {
@@ -50,5 +56,12 @@ public class SortCompare {
         Merge.sort(arr);
         Long end = System.currentTimeMillis();
         System.out.println("希尔排序用时:" + (end - start) + "毫秒");
+    }
+
+    public static void testQuick(Integer[] arr) {
+        Long start = System.currentTimeMillis();
+        Quick.sort(arr);
+        Long end = System.currentTimeMillis();
+        System.out.println("快速排序用时:" + (end - start) + "毫秒");
     }
 }
