@@ -1,5 +1,6 @@
 package com.vi.algorithm.sort;
 
+import java.util.Arrays;
 import java.util.Random;
 //照搬视频里的代码
 public class Quick2 {
@@ -53,5 +54,12 @@ public class Quick2 {
         Comparable temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+
+
+    public static void main(String[] args) {
+        Integer[] arr = {10,9,8,7,6,5,4,3,2,10,1,0,-1};
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }

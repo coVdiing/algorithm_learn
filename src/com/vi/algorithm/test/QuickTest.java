@@ -2,6 +2,7 @@ package com.vi.algorithm.test;
 
 import com.vi.algorithm.sort.Quick;
 import com.vi.algorithm.sort.Quick2;
+import com.vi.algorithm.sort.Quick3;
 
 import java.util.Arrays;
 

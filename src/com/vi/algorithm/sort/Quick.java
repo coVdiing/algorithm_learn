@@ -1,5 +1,6 @@
 package com.vi.algorithm.sort;
 
+import java.util.Arrays;
 import java.util.Random;
 
 //快速排序
@@ -63,5 +64,4 @@ public class Quick {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-
 }
