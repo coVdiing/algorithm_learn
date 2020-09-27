@@ -81,6 +81,8 @@ public class SequenceList<T> implements Iterable<T> {
     public int indexOf(T t) {
         int i;
         for (i = 0; i < size; i++) {
+            if(i == size-1 && !element[i].equals(t))
+                return -1;
             if (element[i].equals(t))
                 break;
         }

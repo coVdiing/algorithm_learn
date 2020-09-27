@@ -25,6 +25,9 @@ public class SequenceListTest {
             System.out.println(str);
         }
         System.out.println("size:"+sl.length());
+        //测试查找索引
+        System.out.println("A的索引==>"+sl.indexOf("A"));
+        System.out.println("a的索引==>"+sl.indexOf("a"));
 
     }
 }
