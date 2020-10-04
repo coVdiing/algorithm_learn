@@ -3,11 +3,11 @@ package com.vi.algorithm.stack;
 import com.vi.algorithm.linear.LinkList;
 
 //  用链表实现栈
-public class LinkListStack {
-    private LinkList<Integer> stack;
+public class LinkListStack<T> {
+    private LinkList<T> stack;
 
     public LinkListStack() {
-        stack = new LinkList<Integer>();
+        stack = new LinkList<T>();
     }
 
     //  链表式的不存在存满的情况
@@ -20,16 +20,16 @@ public class LinkListStack {
         return stack.length() == 0;
     }
 
-    public Integer pop() {
+    public T pop() {
         if (stack.isEmpty()) {
             System.out.println("栈为空！");
             return null;
         }
-        Integer result = stack.remove(stack.length() - 1);
+        T result = stack.remove(stack.length() - 1);
         return result;
     }
 
-    public boolean push(Integer data) {
+    public boolean push(T data) {
         try {
             stack.insert(data);
         } catch (Exception e) {

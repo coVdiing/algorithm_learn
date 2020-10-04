@@ -1,13 +1,15 @@
 package com.vi.algorithm.test;
 
 import com.vi.algorithm.stack.ArrayStack;
+import com.vi.algorithm.stack.LinkListStack;
 
 import java.util.Scanner;
 
 public class StackTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayStack stack = new ArrayStack(4);
+//        ArrayStack stack = new ArrayStack(4);
+        LinkListStack stack = new LinkListStack();
         boolean flag = true;
         while (flag) {
             System.out.println("***按照序号选择功能***");
