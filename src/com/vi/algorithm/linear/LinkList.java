@@ -7,12 +7,12 @@ import java.util.Iterator;
  */
 public class LinkList<T> implements Iterable<T> {
     // 头结点
-    private Node head;
+    private Node<T> head;
     // 链表长度
     private int length;
 
     public LinkList() {
-        head = new Node(null, null);
+        head = new Node<>(null, null);
         length = 0;
     }
 
