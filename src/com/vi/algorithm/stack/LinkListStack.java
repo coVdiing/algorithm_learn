@@ -7,7 +7,7 @@ public class LinkListStack<T> {
     private LinkList<T> stack;
 
     public LinkListStack() {
-        stack = new LinkList<T>();
+        stack = new LinkList<>();
     }
 
     //  链表式的不存在存满的情况
@@ -39,6 +39,11 @@ public class LinkListStack<T> {
         return true;
     }
 
+    //  查看栈顶元素但是不弹出
+    public T peek() {
+        return stack.get(stack.length() - 1);
+    }
+
     //  遍历
     public void list() {
         if (stack.isEmpty()) {
@@ -46,7 +51,7 @@ public class LinkListStack<T> {
             return;
         }
         for (int i = stack.length() - 1; i >= 0; i--) {
-            System.out.printf("stack[%d] = %d\n",i,stack.get(i));
+            System.out.printf("stack[%d] = %d\n", i, stack.get(i));
         }
     }
 }
