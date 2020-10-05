@@ -4,7 +4,7 @@ import com.vi.algorithm.stack.CalculateStack;
 
 import java.math.BigDecimal;
 
-//  加减乘除简单计算Demo,用栈实现的，不带括号多位浮点数加减乘除计算。因为栈是先进后出，在符号判断优先级和操作数顺序处理上不如队列方便
+//  加减乘除简单计算Demo,用栈实现的，不带括号多位浮点数加减乘除计算。
 public class CaculatorDemo {
     public static void main(String[] args) {//  +22.2+44.5678
 //        System.out.println(caculate("11*22*33*44*55-66-71+8+11"));
