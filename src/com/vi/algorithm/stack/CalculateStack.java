@@ -21,6 +21,8 @@ public class CalculateStack<T> extends LinkListStack<T> {
             return 1;
         if ("*".equals(str) || "/".equals(str))
             return 2;
+        if("(".equals(str) || ")".equals(str))
+            return -1;
         throw new RuntimeException("非法操作符");
     }
 
