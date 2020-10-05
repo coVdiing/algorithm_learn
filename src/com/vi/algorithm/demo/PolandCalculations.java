@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
-//  波兰表达式计算(后缀表达式) 这个实现是存在问题的，类似+ *先后出现的时候，不会先计算*,必须要带上括号
+//  波兰表达式计算(后缀表达式)
 public class PolandCalculations {
     public static void main(String[] args) { // 1+(2*3)+4
         String expression  = infixToSuffix("3.1+4.2*5.6-4.6");
@@ -49,7 +49,7 @@ public class PolandCalculations {
             return num1.divide(num2).floatValue();
         throw new RuntimeException("非法的操作符");
     }
-    
+
     /**
      * 中缀表达式转后缀表达式，假设输入的中缀表达式都是符合规范的
      * 思路:
