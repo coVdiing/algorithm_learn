@@ -1,4 +1,4 @@
-package com.vi.algorithm.demo;
+package com.vi.algorithm.recursion;
 
 //  迷宫寻路问题：用递归找出一条能抵达终点的路径
 public class Maze {
