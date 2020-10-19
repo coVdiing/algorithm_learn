@@ -63,5 +63,8 @@ public class SortCompare {
         Quick.sort(arr);
         Long end = System.currentTimeMillis();
         System.out.println("快速排序用时:" + (end - start) + "毫秒");
+        for (Integer ele : arr) {
+            System.out.println(ele);
+        }
     }
 }
