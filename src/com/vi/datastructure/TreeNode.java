@@ -5,31 +5,15 @@ package com.vi.datastructure;
  * 二叉树节点
  */
 public class TreeNode {
-    private int data;
-    private TreeNode leftChild;
-    private TreeNode rightChild;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
-    public int getData() {
-        return data;
+    public TreeNode() {
+
     }
 
-    public void setData(int data) {
-        this.data = data;
-    }
-
-    public TreeNode getLeftChild() {
-        return leftChild;
-    }
-
-    public void setLeftChild(TreeNode leftChild) {
-        this.leftChild = leftChild;
-    }
-
-    public TreeNode getRightChild() {
-        return rightChild;
-    }
-
-    public void setRightChild(TreeNode rightChild) {
-        this.rightChild = rightChild;
+    public TreeNode(int val) {
+        this.val = val;
     }
 }
