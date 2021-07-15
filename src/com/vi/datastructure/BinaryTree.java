@@ -14,9 +14,9 @@ public class BinaryTree {
         TreeNode node = new TreeNode();
         Integer data = inputList.removeFirst();
         if (data != null) {
-            node.setData(data);
-            node.setLeftChild(createBinaryTree(inputList));
-            node.setRightChild(createBinaryTree(inputList));
+            node.val = data;
+            node.left = createBinaryTree(inputList);
+            node.right = createBinaryTree(inputList);
         }
         return node;
     }
@@ -30,9 +30,9 @@ public class BinaryTree {
         if (head == null) {
             return;
         }
-        System.out.print(head.getData() + " ->");
-        preOrderTraveral(head.getLeftChild());
-        preOrderTraveral(head.getRightChild());
+        System.out.print(head.val + " ->");
+        preOrderTraveral(head.left);
+        preOrderTraveral(head.right);
     }
 
     /**
@@ -44,14 +44,14 @@ public class BinaryTree {
         Stack<TreeNode> stack = new Stack<>();
         while (node != null || !stack.isEmpty()) {
             while (node != null) {
-                System.out.print(node.getData() + " ->");
+                System.out.print(node.val + " ->");
                 stack.push(node);
-                node = node.getLeftChild();
+                node = node.left;
             }
 
             if (!stack.isEmpty()) {
                 node = stack.pop();
-                node = node.getRightChild();
+                node = node.right;
             }
         }
     }
@@ -66,13 +66,13 @@ public class BinaryTree {
         while (node != null || !stack.isEmpty()) {
             while (node != null) {
                 stack.push(node);
-                node = node.getLeftChild();
+                node = node.left;
             }
 
             if (!stack.isEmpty()) {
                 node = stack.pop();
-                System.out.print(node.getData() + " ->");
-                node = node.getRightChild();
+                System.out.print(node.val + " ->");
+                node = node.right;
             }
         }
     }
@@ -86,12 +86,12 @@ public class BinaryTree {
         queue.offer(node);
         while (!queue.isEmpty()) {
             node = queue.poll();
-            System.out.println(node.getData()+"->");
-            if (node.getLeftChild() != null) {
-                queue.offer(node.getLeftChild());
+            System.out.println(node.val+"->");
+            if (node.left != null) {
+                queue.offer(node.left);
             }
-            if (node.getRightChild() != null) {
-                queue.offer(node.getRightChild());
+            if (node.right != null) {
+                queue.offer(node.right);
             }
         }
     }
